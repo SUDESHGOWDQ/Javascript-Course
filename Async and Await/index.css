@@ -1,0 +1,15 @@
+body{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    height: auto;
+    width: 100%;
+}
+
+.cards{
+    height:auto;
+    width: 300px;
+    text-align: center;
+    border: 1px solid black;
+}

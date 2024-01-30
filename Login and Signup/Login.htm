@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            height:100vh
+        }
+        form{
+            height:auto;
+            width: 300px;
+            background: black;
+            text-align: center;
+            color: wheat;
+        }
+        form input{
+            margin: 10px;
+            text-align: center;
+            padding: 10px;
+            border:none;
+            outline: none;
+            background: transparent;
+            border-bottom: 1px solid red;
+            color: white;
+        }
+        form button{
+            margin: 10px;
+            padding: 10px;
+            width: 150px;
+            background: orange;
+            border: 1px solid orange;
+        }
+    </style>
+</head>
+<body>
+    <form action="">
+        <h1>LOGIN HERE</h1>
+        <input type="email" id="email" placeholder="Enter your Email">
+        <br>
+        <input type="password"  id="password" placeholder="Enter your password">
+        <br>
+        <button id="login">login</button>
+        <p>Dont Have an Account <a href="./Signup.htm" target="_self">signup</a></p>
+    </form>
+
+
+
+
+    <script>
+        let a = document.getElementById('login')
+        a.addEventListener('click',()=>{
+            let email = document.getElementById('email').value
+            let password = document.getElementById('password').value
+            let userEmail = window.sessionStorage.getItem('email')
+            let userPassword = window.sessionStorage.getItem('password')
+            if (email===userEmail && password===userPassword) {
+                alert('Login successful')
+                window.open('./index.htm')
+            } else {
+                alert('Invalid password or Invalid email')
+            }
+
+        })
+    </script>
+</body>
+</html>

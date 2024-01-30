@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Home</h1>
+    <button id="logout">Logout</button>
+
+
+    <script>
+        let a = document.getElementById('logout')
+        a.addEventListener('click',()=>{
+            window.sessionStorage.clear()
+            window.open('./Signup.htm')
+        })
+    </script>
+</body>
+</html>
